@@ -28,6 +28,9 @@ jobs:
       - name: Docker help command
         run: docker help
 
+      - name: Docker help of command for copy files from container inside location to host location 
+        run: docker help cp
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
