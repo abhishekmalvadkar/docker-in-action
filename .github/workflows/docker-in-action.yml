@@ -32,7 +32,7 @@ jobs:
         run: docker images 
 
       - name: Start mysql container from mysql image
-        run: docker run --name test-mysql -e MYSQL_ROOT_PASSWORD=${{secrets.MYSQL_DB_PASSWORD}} -d mysql
+        run: docker run --name test-mysql -e MYSQL_ROOT_PASSWORD=${{secrets.MYSQL_DB_PASSWORD}} -d mysql:8.0.37-debian
 
       - name: Docker help command
         run: docker help
