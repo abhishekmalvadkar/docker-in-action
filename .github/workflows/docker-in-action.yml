@@ -25,6 +25,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+      - name: Download mysql docker image
+        run: docker pull mysql:8.0.37-debian
+
+      - name: Show me all the images in my system
+        run: docker images 
+
       - name: Docker help command
         run: docker help
 
