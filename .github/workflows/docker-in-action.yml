@@ -31,7 +31,7 @@ jobs:
       - name: Download mysql docker image
         run: docker pull mysql:8.0.37-debian
 
-      - name: Download sample image which depends kn java 6 image 
+      - name: Download sample image which depends on java 6 image 
         run: docker pull dockerinaction/ch3_myapp
 
       - name: Show me all the images in my system
