@@ -32,7 +32,10 @@ jobs:
         run: docker pull dockerinaction/ch3_myapp
 
       - name: Show me all the images in my system
-        run: docker images 
+        run: docker images
+
+      - name: Show me all images means parent as well
+        run: docker images -a
 
       - name: Start mysql container from mysql image
         run: docker run --name test-mysql -e MYSQL_ROOT_PASSWORD=${{secrets.MYSQL_DB_PASSWORD}} -d mysql:8.0.37-debian
