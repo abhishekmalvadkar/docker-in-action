@@ -21,4 +21,6 @@ jobs:
         run: |
           docker pull ghcr.io/abhishekmalvadkar/dev-ihmsservicegateway:latest
           docker images
-          docker run ghcr.io/abhishekmalvadkar/dev-ihmsservicegateway:latest
+          docker run --name="dev-gateway" ghcr.io/abhishekmalvadkar/dev-ihmsservicegateway:latest
+          docker ps
+          docker stop dev-gateway
