@@ -1,4 +1,4 @@
-# This is a basic workflow to help you get started with Actions
+th# This is a basic workflow to help you get started with Actions
 
 name: Test my docker images
 
@@ -21,6 +21,6 @@ jobs:
         run: |
           docker pull ghcr.io/abhishekmalvadkar/dev-ihmsservicegateway:latest
           docker images
-          docker run -d --name="dev-gateway" ghcr.io/abhishekmalvadkar/dev-ihmsservicegateway:latest
+          docker run --name dev-gateway -d ghcr.io/abhishekmalvadkar/dev-ihmsservicegateway:latest
           docker ps
-          docker logs dev-gateway
+          docker logs -f dev-gateway
