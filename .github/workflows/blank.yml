@@ -24,4 +24,3 @@ jobs:
           docker run -d --name="dev-gateway" ghcr.io/abhishekmalvadkar/dev-ihmsservicegateway:latest
           docker ps
           docker logs dev-gateway
-          docker stop dev-gateway
