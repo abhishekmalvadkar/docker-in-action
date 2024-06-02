@@ -34,5 +34,5 @@ jobs:
         run: |
           docker pull ghcr.io/abhishekmalvadkar/dev-ihmsserviceapi:latest
           docker images
-          docker run -e SPRING_PROFILES_ACTIVE="production" --name dev-ihms ghcr.io/abhishekmalvadkar/dev-ihmsserviceapi:latest
+          docker run -e SPRING_PROFILES_ACTIVE="local" --name dev-ihms ghcr.io/abhishekmalvadkar/dev-ihmsserviceapi:latest
           docker logs dev-ihms
