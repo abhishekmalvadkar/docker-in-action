@@ -23,4 +23,6 @@ jobs:
           docker images
           docker run --name dev-gateway -d ghcr.io/abhishekmalvadkar/dev-ihmsservicegateway:latest
           docker ps
-          docker logs -f dev-gateway
+          docker logs dev-gateway
+          docker stop dev-gatewsy
+          docker ps -a
