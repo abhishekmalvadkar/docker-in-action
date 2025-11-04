@@ -21,7 +21,7 @@ jobs:
 
       - name: Simple java app docker image practice flow
         run: |
-          docker build -f sample-java-app-docker-file simple-java-app:latest
+          docker build -f sample-java-app-docker-file -t simple-java-app:latest
           docker images
           docker run --name simple-java-app-container -d simple-java-app:latest
           docker ps
