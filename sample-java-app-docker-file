@@ -1,0 +1,7 @@
+FROM eclipse-temurin:21-jre
+
+COPY simple-java-app/Sample.java /myapp
+WORKDIR /myapp
+
+RUN javac Sample.java
+CMD ["java", "Sample"]
