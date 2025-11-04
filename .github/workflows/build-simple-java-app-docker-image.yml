@@ -25,5 +25,5 @@ jobs:
           docker images
           docker run --name simple-java-app-container -d simple-java-app:latest
           docker ps
-          docker history simple-java-app-container
+          docker history simple-java-app
           docker stop simple-java-app-container
