@@ -37,6 +37,9 @@ jobs:
       - name: Stop simple-java-app container
         run: docker stop simple-java-app-container
 
+      - name: Run simple java image in integrated mode
+        run: docker run --name simple-java-app-container -it simple-java-app:latest
+
 
 
 
