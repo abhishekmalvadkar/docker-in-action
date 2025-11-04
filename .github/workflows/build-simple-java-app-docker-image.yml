@@ -19,11 +19,27 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      - name: Simple java app docker image practice flow
-        run: |
-          docker build -t simple-java-app:latest -f sample-java-app-docker-file .
-          docker images
-          docker run --name simple-java-app-container -d simple-java-app:latest
-          docker ps
-          docker history simple-java-app
-          docker stop simple-java-app-container
+      - name: Simple java app docker image creation
+        run: docker build -t simple-java-app:latest -f sample-java-app-docker-file .
+
+      - name: Show all images
+        run: docker images
+
+      - name: Run Simple java app docker image as container
+        run: docker run --name simple-java-app-container -d simple-java-app:latest
+
+      - name: Show all containers
+        run: docker ps
+
+      - name: Show history of simple-java-app image
+        run: docker history simple-java-app
+
+      - name: Stop simple-java-app container
+        run: docker stop simple-java-app-container
+
+
+
+
+
+
+
